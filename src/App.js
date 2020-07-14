@@ -11,19 +11,20 @@ import User from './components/users/User';
 import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
 
+// Dummy comment to verify commit author issue.
 const App = () => {
   return (
     <GithubState>
       <AlertState>
         <Router>
-          <div className='App'>
-            <Navbar title='Github Finder' />
-            <div className='container'>
+          <div className="App">
+            <Navbar title="Github Finder" />
+            <div className="container">
               <Alert />
               <Switch>
-                <Route exact path='/' component={Home} />
-                <Route exact path='/about' component={About} />
-                <Route exact path='/user/:login' component={User} />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/user/:login" component={User} />
                 <Route component={NotFound} />
               </Switch>
             </div>
